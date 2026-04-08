@@ -1,0 +1,1 @@
+make cookies stay fixed not absolute

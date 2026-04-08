@@ -1,0 +1,620 @@
+@font-face {
+    font-family: hakuna;
+    src: url(Hakuna-Sans/Hakuna-Sans.otf);
+    letter-spacing: 1px;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh; 
+}
+
+.no-overflow {
+    overflow: hidden;
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a i {
+    padding: 25px;
+    margin: -25px;
+    color: black !important;
+    opacity: 0.6;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+a i:hover {
+    opacity: 1;
+}
+
+* {
+    letter-spacing: 1px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-family: hakuna;
+    padding-top: 10px;
+}
+
+.nave {
+    background-color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    opacity: 1;
+    height: 120px;
+}
+
+#adventure, #cCollection {
+    display: none;
+}
+
+#adventure_display {
+    max-width:27%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#home_text {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#adventure_text {
+    margin-top: 10px;
+}
+
+.preview {
+    max-width: 70%;
+    height: auto;
+}
+
+.subtitle {
+    font-family: hakuna !important;
+    font-size: 15px !important;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.cat-div {
+    display: none;
+}
+
+button {
+    font-family: hakuna !important;
+    color: purple;
+    border-width: 0px !important;
+}
+
+button:not(.selected){
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+    color: purple;
+}
+
+#collection {
+    display: none;
+}
+
+.c-img {
+    width: 100%;
+}
+
+.cContainer {
+    padding: 10px;
+    width: 35%;
+    position: relative;
+    display: inline-block;
+}
+
+.topright {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 18px;
+}
+
+.selected, .selected:hover, .selected:active {
+    color: purple !important;
+    opacity: 1 !important;
+}
+
+.col button {
+    font-size: 15px !important;
+    padding: 8px 0;
+    width: 70%;
+}
+
+.a-btn {
+    margin: 10px;
+    float: left;
+    position: absolute;
+    left: 30vw;
+}
+
+.col div {
+    cursor: pointer;
+    display: inline;
+    z-index: 99999;
+}
+
+.col div button:has(+img:hover) {
+    opacity: 1;
+}
+
+.reload-btn {
+    padding: 10px;
+    height: 100%;
+    line-height: 35px;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.reload-btn:hover {
+    opacity: 1;
+}
+
+.c-btn {
+    height:6vw;
+    width:6vw;
+    padding:10px;
+    background-color:rgba(245, 245, 245, 0.9);
+    margin: 17px 0 0 12px;
+    border-radius: 20%;
+    position: relative !important;
+    z-index: 9999999999;
+    overflow: hidden;
+}
+
+#settings {
+    background-color:rgba(245, 245, 245, 0.9);
+    margin: 153px 0 0 12px;
+    padding:15px;
+    border-radius: 20px;
+    width: 240px;
+    position: absolute !important;
+    top: 260px;
+    display: none;
+    z-index: 99999999999999;
+}
+
+.eye, .move {
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px;
+}
+
+.eye {
+    right: 10px;
+}
+
+.move {
+    right: 55px;
+}
+
+.fa-up-down-left-right {
+    font-size: 26px;
+}
+
+#rSize, #rSpeed {
+    margin-right: 6px;
+}
+
+.img_ {
+    position: absolute;
+    height: auto;
+    margin:-60px 0 0 -60px;
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.image {
+    animation: spin linear infinite;
+}
+
+.ui-dialog-content {
+    display: none !important;
+}
+
+.ui-dialog {
+    position: fixed;
+    z-index: 9999999999999999999999;
+}
+
+.ui-dialog-title {
+    margin-right: 45px !important;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+#stats {
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    font-family: hakuna;
+    text-align: left;
+    font-size: 30px;
+    width: 25%;
+}
+
+#stats p {
+    margin: 0;
+}
+
+#ascend-btn {
+    padding-top: 17px;
+    padding-left: 0.8em;
+    font-size: 25px;
+    width: 15%;
+    letter-spacing: 5px;
+    color: black;
+    opacity: 1;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 25px 5px #ffcc2c; 
+    line-height: 1em;
+}
+
+#ascend-sub {
+    font-size: 15px;
+}
+
+#upgrades, #trader {
+    justify-content: center;
+    align-items: center;
+    height: 81.5vh;
+    padding: 50px;
+}
+
+.u-div {
+    background-color:rgba(245, 245, 245, 0.9);
+    width: 80%;
+    height: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    z-index: 999999999999999999999999999999999;
+    text-align: left;
+}
+
+.u-div p, tr {
+    font-size: 20px;
+    font-family: hakuna;
+}
+
+.u-div p {
+    margin: 0;
+}
+
+#sPoints {
+    font-size: 15px;
+}
+
+.upgrades td a {
+    overflow: hidden;
+}
+
+.upgrades td {
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
+
+.first-td {
+    max-width: 70px !important;
+}
+
+.upgrades-icon {
+    position: relative;
+}
+
+.trader-span {
+    float: right;
+    font-size: 25px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+#ascend-counter {
+    text-align: left;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.ascend-img {
+    width: 8%;
+    position: absolute;
+    opacity: 1;
+    left: 70%;
+    bottom: 0;
+}
+
+.blur-bg {
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 50%;
+    margin-left: 25%;
+    height: 100%;
+    box-shadow: 15px 0 15px -1px rgba(245, 245, 245, 0.5), -15px 0 15px -1px rgba(245, 245, 245, 0.5);
+}
+
+.trader {
+    width: 90%;
+    border-radius: 5px;
+}
+
+.new-cat {
+    width: 90%;
+    margin: 10px;
+    outline: 1px dotted black;
+}
+
+.trader-btn {
+    opacity: 1!important;
+    margin-top: 10px;
+}
+
+.btn-warning-light {
+    background-color: #ffe186!important;
+    cursor: default !important;
+}
+
+.dogecoin-widget {
+    display: block;
+    place-self: center;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.small-p {
+    font-size: 15px !important;
+}
+
+#minesweeper {
+    text-align: center;
+}
+
+.minesweeper {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.minesweeper, .minesweeper tr, .minesweeper td {
+    border: black 2px solid;
+}
+
+.minesweeper td {
+    background-color: #ccc;
+}
+
+.revealed {
+    background-color: #eee !important;
+}
+
+.bombed {
+    background-color: red !important;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+    vertical-align: middle;
+    padding-left: 6px;
+}
+
+.fa-bomb, .fa-flag {
+    pointer-events: none;
+}
+
+.fa-heart {
+    margin-top: 30px;
+    color: red;
+    font-size: 35px;
+}
+
+.lives {
+    position: absolute;
+    left: 35%;
+}
+
+.hakuna {
+    font-family: hakuna;
+    font-size: 20px;
+}
+
+#minesweeper-text {
+    line-height: 20px;
+}
+
+#grabber, #upgrades, #trader, #minesweeper {
+    display: none;
+}
+
+.board, .board tr, .board td {
+    border: 1px dotted black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.board {
+    outline: solid 1px blue;
+}
+
+.cell2 {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    text-align: center; 
+    vertical-align: middle;
+    padding: 0;
+}
+
+td img {
+    width: 40px;
+    height: auto;
+}
+
+/* The switch - the box around the slider */
+/* def not copy pasted hehe */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #edc705;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #edc705;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+#minigame_switch {
+    display: none; 
+}
+
+#dogecoin_equiv_display {
+    font-size: 25px;
+    display: none;
+    color: #edc705;
+}
+
+#cookies_container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99999999999999999999999999999999999999999999999999999999999;
+
+    width: 30%;
+    padding: 8px;
+
+    background-color: lightgrey;
+}
+
+#cookies_accept {
+    opacity: 0.7;
+}
+
+#cookies_accept:hover {
+    opacity: 1;
+}
+
+#cookies_learnMore {
+    margin-left: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#cookies_learnMore:hover {
+    opacity: 1;
+}
+
+#cookiesLearnMore_container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999;
+
+    width: 30%;
+    padding: 8px;
+    max-height: 300px;
+    overflow-y: scroll;
+
+    background-color: lightgrey;
+    display: none;
+}
+
+.cookiesLearnMore_buttonsContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cookiesLearnMore_buttonsContainer button {
+    margin: 0 5px;
+}
